@@ -184,7 +184,7 @@ void BleCompositeHID::taskServer(void *pvParameter)
     NimBLEDevice::init(BleCompositeHIDInstance->deviceName);
     NimBLEServer *pServer = NimBLEDevice::createServer();
     pServer->setCallbacks(BleCompositeHIDInstance->_connectionStatus);
-
+    pServer->advertiseOnDisconnect(true);
     BleCompositeHIDInstance->_hid = new NimBLEHIDDevice(pServer);
     
     // Setup the HID descriptor buffers
