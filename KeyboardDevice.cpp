@@ -102,11 +102,11 @@ void KeyboardDevice::modifierKeyPress(uint8_t modifier)
     }
 }
 
-void KeyboardDevice::modifierKeyClick(uint8_t keyCode)
+void KeyboardDevice::modifierKeyClick(uint8_t modifier)
 {
-    modifierKeyPress(keyCode);     // Key pressed
+    modifierKeyPress(modifier);     // Key pressed
     std::this_thread::sleep_for(std::chrono::milliseconds(10)); // Keep pressed
-    modifierKeyRelease(keyCode);   // Key released
+    modifierKeyRelease(modifier);   // Key released
 }
 
 
@@ -136,11 +136,11 @@ void KeyboardDevice::mediaKeyPress(uint32_t mediaKey)
     }
 }
 
-void KeyboardDevice::mediaKeyClick(uint8_t keyCode)
+void KeyboardDevice::mediaKeyClick(uint32_t mediaKey)
 {
-    mediaKeyPress(keyCode);     // Key pressed
+    mediaKeyPress(mediaKey);     // Key pressed
     std::this_thread::sleep_for(std::chrono::milliseconds(10)); // Keep pressed
-    mediaKeyRelease(keyCode);   // Key released
+    mediaKeyRelease(mediaKey);   // Key released
 }
 
 
