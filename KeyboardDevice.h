@@ -80,7 +80,7 @@ public:
     void modifierKeyClick(uint8_t modifier);
     void mediaKeyPress(uint32_t mediaKey);
     void mediaKeyRelease(uint32_t mediaKey);
-    void mediaKeyClick(uint32_t mediaKey)
+    void mediaKeyClick(uint32_t mediaKey);
 
     Signal<KeyboardOutputReport> onLED;
 
